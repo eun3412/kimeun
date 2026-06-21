@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>제14회 콩밭열무축제 | 논산 홍보 웹페이지</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle&family=East+Sea+Dokdo&family=Gamja+Flower&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-900: #173c25;
+      --green-700: #2d6b3d;
+      --green-500: #6cae45;
+      --green-100: #eef7e8;
+      --cream: #fffaf0;
+      --yellow: #f8ce5d;
+      --red: #d9523b;
+      --ink: #1d2a20;
+      --muted: #667364;
+      --line: #d9e6d2;
+      --white: #ffffff;
+      --shadow: 0 18px 45px rgba(23, 60, 37, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Dongle", "Gamja Flower", "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+      font-size: 20px;
+      line-height: 1.65;
+      background: var(--cream);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      overflow: hidden;
+    }
+
+    .hero {
+      min-height: 720px;
+      position: relative;
+      display: flex;
+      align-items: stretch;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(14, 40, 24, 0.88) 0%, rgba(14, 40, 24, 0.72) 38%, rgba(14, 40, 24, 0.18) 78%),
+        url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTA4MDhfNTEg%2FMDAxNzU0NjUyNzcyNjIx.d0cKgdOD5Ho13Ok5TUtqp7UxD41kvCHeIFVbhYg19IQg.JGPXmNEw9kgD1nv_meuTO6qWOUHu8E3OobWMFEZp1lgg.JPEG%2F900%25A3%25DF20250806%25A3%25DF081203.jpg&type=sc960_832") center / cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 120px;
+      background: linear-gradient(180deg, rgba(255, 250, 240, 0), var(--cream));
+    }
+
+    .nav {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px clamp(20px, 5vw, 72px);
+    }
+
+    .brand {
+      font-family: "East Sea Dokdo", "Gamja Flower", sans-serif;
+      font-weight: 800;
+      font-size: 36px;
+      letter-spacing: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      padding: 150px 28px 120px;
+      display: grid;
+      align-content: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      font-size: 21px;
+      font-weight: 700;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 26px 0 22px;
+      font-family: "East Sea Dokdo", "Gamja Flower", sans-serif;
+      font-size: clamp(58px, 8vw, 108px);
+      line-height: 1.03;
+      letter-spacing: 0;
+    }
+
+    .title-red {
+      color: #d63a2f;
+      text-shadow: 0 4px 24px rgba(120, 26, 18, 0.38);
+    }
+
+    .hero-copy {
+      max-width: 620px;
+      margin: 0 0 34px;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: clamp(30px, 3vw, 38px);
+      line-height: 1.18;
+      word-break: keep-all;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .button.primary {
+      background: var(--yellow);
+      color: var(--green-900);
+    }
+
+    .button.secondary {
+      border: 1px solid rgba(255, 255, 255, 0.46);
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .quick-info {
+      position: relative;
+      z-index: 2;
+      width: min(1120px, calc(100% - 40px));
+      margin: -70px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      overflow: hidden;
+      border-radius: 8px;
+      background: var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .info-item {
+      background: var(--white);
+      padding: 22px;
+    }
+
+    .info-item strong {
+      display: block;
+      color: var(--green-700);
+      font-size: 19px;
+      margin-bottom: 6px;
+    }
+
+    .info-item span {
+      display: block;
+      font-size: 24px;
+      font-weight: 800;
+      word-break: keep-all;
+    }
+
+    section {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 86px 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 42px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .label {
+      color: var(--red);
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    h2 {
+      margin: 8px 0 0;
+      color: var(--green-900);
+      font-family: "East Sea Dokdo", "Gamja Flower", sans-serif;
+      font-size: clamp(42px, 5vw, 64px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 24px;
+      word-break: keep-all;
+    }
+
+    .concept-grid,
+    .program-grid,
+    .content-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .concept-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .program-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .content-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      min-height: 210px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    .card.dark {
+      background: var(--green-900);
+      color: var(--white);
+      border-color: var(--green-900);
+    }
+
+    .card .number {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      margin-bottom: 18px;
+      background: var(--green-100);
+      color: var(--green-700);
+      font-weight: 900;
+    }
+
+    .card.dark .number {
+      background: rgba(255, 255, 255, 0.14);
+      color: var(--yellow);
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      color: inherit;
+      font-family: "East Sea Dokdo", "Gamja Flower", sans-serif;
+      font-size: 34px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+      word-break: keep-all;
+    }
+
+    .card.dark p,
+    .card.dark li {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .card p {
+      margin: 0;
+    }
+
+    ul {
+      margin: 14px 0 0;
+      padding-left: 20px;
+    }
+
+    .band {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 84px max(20px, calc((100vw - 1120px) / 2));
+      background: var(--green-100);
+    }
+
+    .band-inner {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .taste-box {
+      border-radius: 8px;
+      padding: 34px;
+      background: var(--green-900);
+      color: var(--white);
+    }
+
+    .taste-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .taste-item {
+      border-radius: 8px;
+      padding: 18px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--green-900);
+    }
+
+    .channel-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .channel {
+      padding: 24px;
+      border-radius: 8px;
+      background: var(--white);
+      border-left: 6px solid var(--green-500);
+      box-shadow: 0 8px 26px rgba(23, 60, 37, 0.08);
+    }
+
+    .channel strong {
+      color: var(--green-700);
+      font-size: 24px;
+    }
+
+    .effect {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .effect-panel {
+      padding: 34px;
+      border-radius: 8px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .effect-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .effect-list li {
+      padding: 16px 18px;
+      border-radius: 8px;
+      background: var(--green-100);
+      color: var(--green-900);
+      font-weight: 800;
+    }
+
+    .cta {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 82px 20px;
+      text-align: center;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--green-900), #2f7a42);
+    }
+
+    .cta h2 {
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      max-width: 680px;
+      margin: 0 auto 26px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 18px;
+      word-break: keep-all;
+    }
+
+    footer {
+      padding: 26px 20px;
+      text-align: center;
+      color: var(--muted);
+      background: var(--white);
+      font-size: 18px;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        min-height: 650px;
+        background:
+          linear-gradient(180deg, rgba(14, 40, 24, 0.88) 0%, rgba(14, 40, 24, 0.62) 58%, rgba(14, 40, 24, 0.25) 100%),
+          url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTA4MDhfNTEg%2FMDAxNzU0NjUyNzcyNjIx.d0cKgdOD5Ho13Ok5TUtqp7UxD41kvCHeIFVbhYg19IQg.JGPXmNEw9kgD1nv_meuTO6qWOUHu8E3OobWMFEZp1lgg.JPEG%2F900%25A3%25DF20250806%25A3%25DF081203.jpg&type=sc960_832") center / cover no-repeat;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .quick-info,
+      .section-head,
+      .concept-grid,
+      .program-grid,
+      .content-grid,
+      .band-inner,
+      .taste-list,
+      .channel-row,
+      .effect {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-info {
+        margin-top: -44px;
+      }
+
+      section,
+      .band {
+        padding-top: 64px;
+        padding-bottom: 64px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero" id="top">
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="brand" href="#top">논산 콩밭열무축제</a>
+        <div class="nav-links">
+          <a href="#about">축제 소개</a>
+          <a href="#program">주요 프로그램</a>
+          <a href="#channel">홍보 채널</a>
+          <a href="#visit">방문 안내</a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <span class="eyebrow">제14회 로컬푸드 관광축제</span>
+        <h1>제 14회<br>콩밭열무<span class="title-red">축제</span></h1>
+        <p class="hero-copy">
+          여름 입맛을 깨우는 논산의 초록 밥상. 콩밭열무로 만든 먹거리, 가족 체험,
+          직거래 장터가 함께 열리는 건강한 농촌축제에 초대합니다.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#program">프로그램 보기</a>
+          <a class="button secondary" href="#visit">방문 정보 확인</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="quick-info" aria-label="축제 기본 정보">
+      <div class="info-item">
+        <strong>일시</strong>
+        <span>2026. 7. 18. 토 - 7. 19. 일</span>
+      </div>
+      <div class="info-item">
+        <strong>장소</strong>
+        <span>논산 콩밭열무 체험광장</span>
+      </div>
+      <div class="info-item">
+        <strong>대상</strong>
+        <span>가족, 2030, 지역 주민</span>
+      </div>
+      <div class="info-item">
+        <strong>콘셉트</strong>
+        <span>여름을 맛있게 기억하는 방법</span>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="section-head">
+        <div>
+          <span class="label">기획 배경 & 목적</span>
+          <h2>논산 농산물을 축제형 관광 브랜드로 키웁니다</h2>
+        </div>
+        <p class="lead">
+          콩밭열무의 신선함과 농촌의 정겨움을 한데 묶어 농가 소득, 지역 상권,
+          방문객 경험이 함께 살아나는 계절형 홍보 콘텐츠를 만듭니다.
+        </p>
+      </div>
+
+      <div class="concept-grid">
+        <article class="card dark">
+          <span class="number">1</span>
+          <h3>지역 농산물 인지도 강화</h3>
+          <p>콩밭열무를 논산의 여름 대표 농산물로 소개하고, 맛과 산지 이미지를 동시에 각인합니다.</p>
+        </article>
+        <article class="card">
+          <span class="number">2</span>
+          <h3>농가와 상권 연결</h3>
+          <p>직거래 장터, 시식, 지역 음식점 연계로 축제 방문이 실제 소비로 이어지게 설계합니다.</p>
+        </article>
+        <article class="card">
+          <span class="number">3</span>
+          <h3>가족형 농촌관광 확대</h3>
+          <p>체험과 먹거리, 인증 콘텐츠를 결합해 주말 나들이 목적지로 논산을 제안합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="band-inner">
+        <div>
+          <span class="label">핵심 콘셉트</span>
+          <h2>여름 입맛을 깨우는 논산의 초록 밥상</h2>
+          <p class="lead">
+            콩밭열무를 중심으로 먹고, 담그고, 찍고, 사가는 흐름을 만들며
+            방문객이 축제의 맛을 집까지 가져가도록 구성합니다.
+          </p>
+        </div>
+        <div class="taste-box">
+          <h3>방문객 경험 흐름</h3>
+          <div class="taste-list">
+            <div class="taste-item">열무국수 시식</div>
+            <div class="taste-item">열무김치 담그기</div>
+            <div class="taste-item">초록 밭길 포토존</div>
+            <div class="taste-item">농산물 직거래 장터</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="program">
+      <div class="section-head">
+        <div>
+          <span class="label">주요 프로그램</span>
+          <h2>맛보고 체험하는 현장형 축제</h2>
+        </div>
+        <p class="lead">
+          가족 단위 방문객에게는 체험을, 2030 세대에게는 공유할 장면을,
+          지역 주민에게는 참여와 판매의 기회를 제공합니다.
+        </p>
+      </div>
+
+      <div class="program-grid">
+        <article class="card">
+          <span class="number">A</span>
+          <h3>콩밭열무 한 상</h3>
+          <p>열무국수, 열무비빔밥, 열무김치 시식으로 논산의 여름 맛을 직관적으로 전달합니다.</p>
+        </article>
+        <article class="card">
+          <span class="number">B</span>
+          <h3>내 손으로 담그는 열무김치</h3>
+          <p>가족이 함께 참여하는 김치 담그기 체험으로 축제 기억을 오래 남깁니다.</p>
+        </article>
+        <article class="card">
+          <span class="number">C</span>
+          <h3>초록 밭길 인증샷</h3>
+          <p>열무밭 배경 포토존과 SNS 이벤트를 운영해 온라인 확산을 유도합니다.</p>
+        </article>
+        <article class="card">
+          <span class="number">D</span>
+          <h3>로컬 직거래 장터</h3>
+          <p>콩밭열무와 논산 농산물을 판매하며 농가 소득과 지역 소비를 연결합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="channel">
+      <div class="section-head">
+        <div>
+          <span class="label">채널별 실행안</span>
+          <h2>온라인 관심을 현장 방문으로 전환합니다</h2>
+        </div>
+        <p class="lead">
+          축제 전에는 기대감을 만들고, 축제 중에는 실시간 공유를 늘리며,
+          축제 후에는 지역 농산물 브랜드로 기억되게 합니다.
+        </p>
+      </div>
+
+      <div class="channel-row">
+        <div class="channel">
+          <strong>SNS 숏폼</strong>
+          <p>열무 수확, 음식 조리, 방문객 반응을 15초 영상으로 제작해 축제 전 확산합니다.</p>
+        </div>
+        <div class="channel">
+          <strong>지역 연계 홍보</strong>
+          <p>논산 관광지, 전통시장, 음식점과 함께 당일 방문 코스를 제안합니다.</p>
+        </div>
+        <div class="channel">
+          <strong>현장 참여 이벤트</strong>
+          <p>포토존 인증, 구매 영수증 이벤트, 체험 후기 공유로 현장 체류 시간을 늘립니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <span class="label">콘텐츠 예시</span>
+          <h2>공유하기 쉬운 장면을 먼저 설계합니다</h2>
+        </div>
+        <p class="lead">
+          홍보물은 축제의 설명보다 방문객이 따라 하고 싶은 장면을 중심으로 만듭니다.
+        </p>
+      </div>
+
+      <div class="content-grid">
+        <article class="card">
+          <h3>한 그릇의 여름</h3>
+          <ul>
+            <li>열무국수 클로즈업 영상</li>
+            <li>농가 추천 레시피 카드뉴스</li>
+            <li>시식 부스 방문 후기</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>우리 가족 열무김치</h3>
+          <ul>
+            <li>어린이 체험 장면</li>
+            <li>완성 김치 포장 인증샷</li>
+            <li>가정용 보관 팁 콘텐츠</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>논산 초록 밭길</h3>
+          <ul>
+            <li>열무밭 포토존 릴스</li>
+            <li>커플·친구 방문 코스</li>
+            <li>해시태그 이벤트</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="visit">
+      <div class="effect">
+        <div class="effect-panel">
+          <span class="label">기대 효과</span>
+          <h2>농가에는 소득을, 지역에는 활기를, 논산에는 새 브랜드를</h2>
+          <p class="lead">
+            콩밭열무축제는 단기 행사에 머물지 않고 논산 농촌관광의 반복 방문 이유가 되는
+            계절형 콘텐츠로 확장될 수 있습니다.
+          </p>
+        </div>
+        <div class="effect-panel">
+          <ul class="effect-list">
+            <li>콩밭열무 대표 농산물 브랜딩</li>
+            <li>방문객 유입을 통한 지역 상권 활성화</li>
+            <li>가족·청년층 대상 논산 관광 이미지 강화</li>
+            <li>농가 직거래 확대와 지역 소비 촉진</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>이번 여름, 논산에서 가장 싱그러운 맛을 만나보세요</h2>
+      <p>
+        제14회 콩밭열무축제는 논산의 농산물, 사람, 여행을 한자리에서 만나는
+        로컬푸드 관광축제입니다.
+      </p>
+      <a class="button primary" href="#top">축제 첫 화면으로 이동</a>
+    </section>
+  </main>
+
+  <footer>
+    제14회 콩밭열무축제 홍보용 웹페이지 시안 · 논산 농촌관광 브랜딩 기획안 기반
+  </footer>
+</body>
+</html>
